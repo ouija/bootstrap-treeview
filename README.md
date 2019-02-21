@@ -2,40 +2,27 @@
 
 ---
 
-![Bower version](https://img.shields.io/bower/v/bootstrap-treeview.svg?style=flat)
-[![npm version](https://img.shields.io/npm/v/bootstrap-treeview.svg?style=flat)](https://www.npmjs.com/package/bootstrap-treeview)
-[![Build Status](https://img.shields.io/travis/jonmiles/bootstrap-treeview/master.svg?style=flat)](https://travis-ci.org/jonmiles/bootstrap-treeview)
-
 A simple and elegant solution to displaying hierarchical tree structures (i.e. a Tree View) while leveraging the best that Twitter Bootstrap has to offer.
 
-![Bootstrap Tree View Default](https://raw.github.com/jonmiles/bootstrap-treeview/master/screenshot/default.PNG)
+Originally forked from https://github.com/jonmiles/bootstrap-treeview (Latest commit 542f57e on May 9, 2015)
+
+Updated to work with Bootstrap 4 and latest jQuery.
+
+![Bootstrap Tree View Default](https://raw.github.com/ouija/bootstrap-treeview/master/screenshot/default.PNG)
 
 ## Dependencies
 
-Where provided these are the actual versions bootstrap-treeview has been tested against.  
+Where provided these are the actual versions ouija's bootstrap-treeview has been tested against.  
 
-- [Bootstrap v3.3.4 (>= 3.0.0)](http://getbootstrap.com/)
-- [jQuery v2.1.3 (>= 1.9.0)](http://jquery.com/)
+- [Bootstrap v4.3.1 (>= 3.0.0)](http://getbootstrap.com/)
+- [jQuery v3.3.1 (>= 1.9.0)](http://jquery.com/)
 
 
 ## Getting Started
 
 ### Install
 
-You can install using bower (recommended):
-
-```javascript
-$ bower install bootstrap-treeview
-```
-
-or using npm:
-
-```javascript
-$ npm install bootstrap-treeview
-```
-
-or [download](https://github.com/jonmiles/bootstrap-treeview/releases/tag/v1.2.0) manually.
-
+Just include the css and javascript into your HTML file.
 
 
 ### Usage
