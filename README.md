@@ -616,6 +616,16 @@ $('#tree').treeview('selectNode', [ nodeId, { silent: true } ]);
 
 Triggers `nodeSelected` event; pass silent to suppress events.
 
+#### selectAll(options)
+
+Selects all tree nodes
+
+```javascript
+$('#tree').treeview('selectAll', { silent: true });
+```
+
+Triggers `nodeSelected` event; pass silent to suppress events.
+
 #### toggleNodeChecked(node | nodeId, options)
 
 Toggles a nodes checked state; checking if unchecked, unchecking if checked.
@@ -737,7 +747,8 @@ $('#tree').on('nodeSelected', function(event, data) {
 
 
 ## Copyright and Licensing
-Copyright 2013 Jonathan Miles
+Forked by ouija in 2019
+Original Author: Jonathan Miles
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

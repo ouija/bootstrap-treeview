@@ -1,8 +1,8 @@
 /* =========================================================
- * bootstrap-treeview.js v1.2.0
+ * bootstrap-treeview.js v1.2.1
  * =========================================================
- * Copyright 2013 Jonathan Miles
- * Project URL : http://www.jondmiles.com/bootstrap-treeview
+ * Ouija Fork: https://github.com/ouija/bootstrap-treeview
+ * Original Project URL : http://www.jondmiles.com/bootstrap-treeview
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -117,6 +117,8 @@
 			selectNode: $.proxy(this.selectNode, this),
 			unselectNode: $.proxy(this.unselectNode, this),
 			toggleNodeSelected: $.proxy(this.toggleNodeSelected, this),
+			selectAll: $.proxy(this.selectAll, this),
+			unselectAll: $.proxy(this.unselectAll, this),
 
 			// Expand / collapse methods
 			collapseAll: $.proxy(this.collapseAll, this),
@@ -835,6 +837,31 @@
 		this.render();
 	};
 
+	/**
+		Select all tree nodes
+		@param {optional Object} options
+	*/
+	Tree.prototype.selectAll = function (options) {
+		var identifiers = this.findNodes('false', 'g', 'state.selected');
+		this.forEachIdentifier(identifiers, options, $.proxy(function (node, options) {
+			this.setSelectedState(node, true, options);
+		}, this));
+
+		this.render();
+	};
+
+	/**
+		Unselect all tree nodes
+		@param {optional Object} options
+	*/
+	Tree.prototype.unselectAll = function (options) {
+		var identifiers = this.findNodes('true', 'g', 'state.selected');
+		this.forEachIdentifier(identifiers, options, $.proxy(function (node, options) {
+			this.setSelectedState(node, false, options);
+		}, this));
+
+		this.render();
+	};
 
 	/**
 		Collapse all tree nodes
